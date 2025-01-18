@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b22h7bntvg4m"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_52wtj"]
+outer_radius = 0.6
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sxyav"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t8tlo"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_52wtj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_sxyav")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_t8tlo")

@@ -12,33 +12,33 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_bddy6"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xfhbd"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6bim1"]
 seamless = true
 noise = SubResource("FastNoiseLite_bddy6")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ui61q"]
 sky_top_color = Color(0.207954, 0.469072, 0.677961, 1)
 sky_horizon_color = Color(0.416077, 0.709891, 0.750307, 1)
-sky_cover = SubResource("NoiseTexture2D_xfhbd")
+sky_cover = SubResource("NoiseTexture2D_6bim1")
 ground_bottom_color = Color(0.274025, 0.205125, 0.127106, 1)
 ground_horizon_color = Color(0.59956, 0.68531, 0.5716, 1)
 
-[sub_resource type="Sky" id="Sky_v3jsr"]
+[sub_resource type="Sky" id="Sky_ckb2u"]
 sky_material = SubResource("ProceduralSkyMaterial_ui61q")
 
 [sub_resource type="Environment" id="Environment_8wii3"]
 background_mode = 2
-sky = SubResource("Sky_v3jsr")
+sky = SubResource("Sky_ckb2u")
 ambient_light_source = 3
 reflected_light_source = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3u33k"]
 albedo_texture = ExtResource("5_fe3ko")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u064i"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgjc8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_be4on"]
-material = SubResource("StandardMaterial3D_u064i")
+material = SubResource("StandardMaterial3D_jgjc8")
 size = Vector2(20, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4h1nq"]
