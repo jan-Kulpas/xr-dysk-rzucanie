@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bkwxxemjwp3j3"]
+
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-03-1-staticbody.tscn" id="1_o5jnl"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-03-2-staticbody.tscn" id="2_2kuhj"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-03-3-staticbody.tscn" id="3_ohoqb"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-05-staticbody.tscn" id="4_fr40g"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/hedge-01-staticbody.tscn" id="5_h0j01"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-02-staticbody.tscn" id="6_1qotm"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-01-staticbody.tscn" id="7_is3pb"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-04-staticbody.tscn" id="8_eum31"]
+[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-03-staticbody.tscn" id="9_nc0vh"]
+
+[node name="TreePatchSmall" type="Node3D"]
+
+[node name="Tree-03-1-StaticBody" parent="." instance=ExtResource("1_o5jnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134254, 0, -1.33947)
+
+[node name="Tree-03-2-StaticBody" parent="." instance=ExtResource("2_2kuhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62436, 0, 0.105555)
+
+[node name="Tree-03-3-StaticBody" parent="." instance=ExtResource("3_ohoqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39705, 0, 0.418619)
+
+[node name="Bush-05-StaticBody" parent="." instance=ExtResource("4_fr40g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26528, 0, 0.258709)
+
+[node name="Bush-05-StaticBody2" parent="." instance=ExtResource("4_fr40g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19703, 0, -2.42516)
+
+[node name="Hedge-01-StaticBody" parent="." instance=ExtResource("5_h0j01")]
+transform = Transform3D(-0.726575, 0, 0.687088, 0, 1, 0, -0.687088, 0, -0.726575, 1.71509, 0, 0.746861)
+
+[node name="Bush-05-StaticBody3" parent="." instance=ExtResource("4_fr40g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55579, 0, -3.447)
+
+[node name="Bush-02-StaticBody" parent="." instance=ExtResource("6_1qotm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69938, 0, -0.182731)
+
+[node name="Bush-01-StaticBody" parent="." instance=ExtResource("7_is3pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42546, 0, 1.52969)
+
+[node name="Bush-02-StaticBody2" parent="." instance=ExtResource("6_1qotm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22864, 0, 1.90789)
+
+[node name="Bush-04-StaticBody" parent="." instance=ExtResource("8_eum31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97049, 0, -0.140404)
+
+[node name="Bush-04-StaticBody2" parent="." instance=ExtResource("8_eum31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7987, 0.277764, 0.275399)
+
+[node name="Bush-03-StaticBody" parent="." instance=ExtResource("9_nc0vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739612, 0, -2.82346)
+
+[node name="Hedge-01-StaticBody2" parent="." instance=ExtResource("5_h0j01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9157, 0, -1.20936)
+
+[node name="Bush-03-StaticBody2" parent="." instance=ExtResource("9_nc0vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36062, 0, -2.23691)
+
+[node name="Bush-01-StaticBody2" parent="." instance=ExtResource("7_is3pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.590038, 0, -4.07198)
+
+[node name="Bush-04-StaticBody3" parent="." instance=ExtResource("8_eum31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15563, 0, -2.23213)
