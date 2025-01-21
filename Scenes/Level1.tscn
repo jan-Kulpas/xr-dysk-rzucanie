@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bjsa08515exsn"]
+[gd_scene load_steps=23 format=3 uid="uid://bjsa08515exsn"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_p4omq"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_b63d7"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://doh1ihpexh7vv" path="res://Textures/grass.png" id="9_ct5i2"]
 [ext_resource type="PackedScene" uid="uid://bod2b5t285h1a" path="res://Scenes/dysk.tscn" id="10_p2l55"]
 [ext_resource type="PackedScene" uid="uid://bhtssm61hr1oa" path="res://Scenes/Tree_patch.tscn" id="11_5yaip"]
+[ext_resource type="PackedScene" uid="uid://b22h7bntvg4m" path="res://Scenes/EndHole.tscn" id="11_xchqm"]
 [ext_resource type="PackedScene" uid="uid://bkwxxemjwp3j3" path="res://Scenes/Tree_patch_small.tscn" id="12_pk2no"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_h4v3f"]
@@ -89,80 +90,83 @@ shape = SubResource("BoxShape3D_df3di")
 [node name="Dysk" parent="." index="4" instance=ExtResource("10_p2l55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27326, 0.182968, -1.89842)
 
-[node name="TreePatch" parent="." index="5" instance=ExtResource("11_5yaip")]
+[node name="Hole" parent="." index="5" instance=ExtResource("11_xchqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5651, 0, -1.58966)
+
+[node name="TreePatch" parent="." index="6" instance=ExtResource("11_5yaip")]
 transform = Transform3D(-0.873772, 0, -0.486335, 0, 1, 0, 0.486335, 0, -0.873772, 12.8711, 0, 9.29459)
 
-[node name="TreePatch2" parent="." index="6" instance=ExtResource("11_5yaip")]
+[node name="TreePatch2" parent="." index="7" instance=ExtResource("11_5yaip")]
 transform = Transform3D(-0.439939, 0, -0.898027, 0, 1, 0, 0.898027, 0, -0.439939, 36.0584, 0, 8.31655)
 
-[node name="TreePatch3" parent="." index="7" instance=ExtResource("11_5yaip")]
+[node name="TreePatch3" parent="." index="8" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2144, 0, 10.6279)
 
-[node name="TreePatch4" parent="." index="8" instance=ExtResource("11_5yaip")]
+[node name="TreePatch4" parent="." index="9" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.919135, 0, -0.393942, 0, 1, 0, 0.393942, 0, 0.919135, -10.0682, 0, -11.7265)
 
-[node name="TreePatch5" parent="." index="9" instance=ExtResource("11_5yaip")]
+[node name="TreePatch5" parent="." index="10" instance=ExtResource("11_5yaip")]
 transform = Transform3D(-0.439939, 0, -0.898028, 0, 1, 0, 0.898028, 0, -0.439939, 57.1009, 0, 10.3865)
 
-[node name="TreePatch6" parent="." index="10" instance=ExtResource("11_5yaip")]
+[node name="TreePatch6" parent="." index="11" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.528438, 0, -0.848972, 0, 1, 0, 0.848972, 0, 0.528438, 22.9861, 0, -8.64262)
 
-[node name="TreePatch7" parent="." index="11" instance=ExtResource("11_5yaip")]
+[node name="TreePatch7" parent="." index="12" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.919135, 0, -0.393942, 0, 1, 0, 0.393942, 0, 0.919135, 62.188, 0, -9.38027)
 
-[node name="TreePatch8" parent="." index="12" instance=ExtResource("11_5yaip")]
+[node name="TreePatch8" parent="." index="13" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.919135, 0, -0.393942, 0, 1, 0, 0.393942, 0, 0.919135, 60.947, 0, -31.9149)
 
-[node name="TreePatch9" parent="." index="13" instance=ExtResource("11_5yaip")]
+[node name="TreePatch9" parent="." index="14" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7301, 0, -28.2045)
 
-[node name="TreePatch10" parent="." index="14" instance=ExtResource("11_5yaip")]
+[node name="TreePatch10" parent="." index="15" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.357, 0, -31.339)
 
-[node name="TreePatch11" parent="." index="15" instance=ExtResource("11_5yaip")]
+[node name="TreePatch11" parent="." index="16" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.919135, 0, 0.393942, 0, 1, 0, -0.393942, 0, 0.919135, 31.5517, 0, -45.3332)
 
-[node name="TreePatch12" parent="." index="16" instance=ExtResource("11_5yaip")]
+[node name="TreePatch12" parent="." index="17" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.819, 0, -47.7198)
 
-[node name="TreePatch13" parent="." index="17" instance=ExtResource("11_5yaip")]
+[node name="TreePatch13" parent="." index="18" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.361, 0, -69.9482)
 
-[node name="TreePatch14" parent="." index="18" instance=ExtResource("11_5yaip")]
+[node name="TreePatch14" parent="." index="19" instance=ExtResource("11_5yaip")]
 transform = Transform3D(-0.759271, 0, 0.650774, 0, 1, 0, -0.650774, 0, -0.759271, -17.22, 0, -51.973)
 
-[node name="TreePatchSmall" parent="." index="19" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall" parent="." index="20" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.0505929, 0, 0.998719, 0, 1, 0, -0.998719, 0, -0.0505929, -21.8883, 0, -5.84391)
 
-[node name="TreePatchSmall2" parent="." index="20" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall2" parent="." index="21" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.0505929, 0, -0.998719, 0, 1, 0, 0.998719, 0, -0.0505929, -22.1006, 0, -19.3945)
 
-[node name="TreePatchSmall3" parent="." index="21" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall3" parent="." index="22" instance=ExtResource("12_pk2no")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9248, 0, -73.8051)
 
-[node name="TreePatchSmall4" parent="." index="22" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall4" parent="." index="23" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, -0.981627, 13.0507, 0, -74.8655)
 
-[node name="TreePatch15" parent="." index="23" instance=ExtResource("11_5yaip")]
+[node name="TreePatch15" parent="." index="24" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.919135, 0, -0.393942, 0, 1, 0, 0.393942, 0, 0.919135, 60.9231, 0, -54.0896)
 
-[node name="TreePatchSmall5" parent="." index="24" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall5" parent="." index="25" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.0505929, 0, -0.998719, 0, 1, 0, 0.998719, 0, -0.0505929, 32.1683, 0, -24.3237)
 
-[node name="TreePatchSmall6" parent="." index="25" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall6" parent="." index="26" instance=ExtResource("12_pk2no")]
 transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, 43.8361, 0, -15.9412)
 
-[node name="TreePatchSmall7" parent="." index="26" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall7" parent="." index="27" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.95424, 0, -0.299041, 0, 1, 0, 0.299041, 0, -0.95424, 22.7175, 0, -60.5819)
 
-[node name="TreePatch16" parent="." index="27" instance=ExtResource("11_5yaip")]
+[node name="TreePatch16" parent="." index="28" instance=ExtResource("11_5yaip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8851, 0, -77.1092)
 
-[node name="TreePatch17" parent="." index="28" instance=ExtResource("11_5yaip")]
+[node name="TreePatch17" parent="." index="29" instance=ExtResource("11_5yaip")]
 transform = Transform3D(0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979575, 49.8366, 0, -70.5217)
 
-[node name="TreePatchSmall8" parent="." index="29" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall8" parent="." index="30" instance=ExtResource("12_pk2no")]
 transform = Transform3D(0.688355, 0, -0.725374, 0, 1, 0, 0.725374, 0, 0.688355, 66.2231, 0, -66.9317)
 
-[node name="TreePatchSmall9" parent="." index="30" instance=ExtResource("12_pk2no")]
+[node name="TreePatchSmall9" parent="." index="31" instance=ExtResource("12_pk2no")]
 transform = Transform3D(-0.994881, 0, 0.101056, 0, 1, 0, -0.101056, 0, -0.994881, 1.03764, 0, -69.2461)
