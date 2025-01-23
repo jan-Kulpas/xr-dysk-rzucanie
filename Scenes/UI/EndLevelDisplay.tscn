@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjcfmf62caywa"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_gsu1t"]
+[ext_resource type="PackedScene" uid="uid://blh7ad7e2q1qq" path="res://Scenes/UI/EndLevelScreen.tscn" id="2_y58w0"]
+
+[node name="EndLevelDisplay" type="Node3D"]
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("1_gsu1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052855, 1.19209e-07, -7.86781e-05)
+collision_layer = 5242880
+scene = ExtResource("2_y58w0")
+viewport_size = Vector2(800, 600)
+scene_properties_keys = PackedStringArray()

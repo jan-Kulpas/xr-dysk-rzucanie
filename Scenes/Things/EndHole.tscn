@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b22h7bntvg4m"]
 
-[ext_resource type="Script" path="res://Scenes/end_hole.gd" id="1_71pn2"]
+[ext_resource type="Script" path="res://Scenes/Things/end_hole.gd" id="1_71pn2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aarpm"]
 albedo_color = Color(0.529412, 1, 1, 1)

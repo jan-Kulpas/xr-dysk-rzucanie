@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="4_8v8q5"]
 [ext_resource type="Texture2D" uid="uid://doh1ihpexh7vv" path="res://Textures/grass.png" id="5_fe3ko"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_c0v05"]
-[ext_resource type="PackedScene" uid="uid://bod2b5t285h1a" path="res://Scenes/dysk.tscn" id="9_2ahl0"]
+[ext_resource type="PackedScene" uid="uid://bod2b5t285h1a" path="res://Scenes/Things/dysk.tscn" id="9_2ahl0"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_bddy6"]
 

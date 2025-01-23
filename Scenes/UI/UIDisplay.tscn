@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://3ofvrruq1m6v"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_dtc8o"]
+[ext_resource type="Script" path="res://Scenes/UI/ui_display.gd" id="1_lcy6g"]
+[ext_resource type="PackedScene" uid="uid://lk2ie0vjbtd8" path="res://Scenes/UI/UI.tscn" id="2_krpin"]
+
+[node name="UiDisplay" type="Node3D"]
+script = ExtResource("1_lcy6g")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("1_dtc8o")]
+transform = Transform3D(1, -0.000186664, 7.04217e-05, 0.000186664, 1, 6.37352e-05, -7.04217e-05, -6.37352e-05, 1, 0.000715375, 0.00140048, -0.000335246)
+screen_size = Vector2(0.15, 0.075)
+collision_layer = 5242880
+scene = ExtResource("2_krpin")
+viewport_size = Vector2(400, 200)
+input_keyboard = false
+scene_properties_keys = PackedStringArray("ui.gd")

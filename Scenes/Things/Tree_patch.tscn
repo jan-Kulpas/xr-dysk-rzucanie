@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-01-2-staticbody.tscn" id="1_y5k3n"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-2-staticbody.tscn" id="2_uodcr"]
-[ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-3-staticbody.tscn" id="3_s2had"]
+[ext_resource type="PackedScene" uid="uid://bs61p8kj7s6pc" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-3-staticbody.tscn" id="3_s2had"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-01-3-staticbody.tscn" id="4_3yiie"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-03-2-staticbody.tscn" id="5_q1q08"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-4-staticbody.tscn" id="6_8u5ss"]
