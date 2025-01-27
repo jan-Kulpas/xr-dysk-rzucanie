@@ -1,7 +1,9 @@
 extends Control
 
-@onready var throws_label = $MarginContainer/VBoxContainer/Throws
-@onready var time_label = $MarginContainer/VBoxContainer/Time
+@onready var throws_label = $MarginContainer/HBoxContainer/VBoxContainer/Throws
+@onready var time_label = $MarginContainer/HBoxContainer/VBoxContainer/Time
+
+signal reset()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,3 +19,7 @@ func update_throws(count: int):
 
 func update_timer(time: String):
 	time_label.text = "Time: %s" % time
+
+
+func _on_button_pressed() -> void:
+	reset.emit()

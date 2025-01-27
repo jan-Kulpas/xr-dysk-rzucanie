@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bjsa08515exsn"]
+[gd_scene load_steps=29 format=3 uid="uid://bjsa08515exsn"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_p4omq"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_b63d7"]
@@ -9,9 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_c2qen"]
 [ext_resource type="PackedScene" uid="uid://3ofvrruq1m6v" path="res://Scenes/UI/UIDisplay.tscn" id="6_gbv02"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="7_ccdse"]
-[ext_resource type="Texture2D" uid="uid://doh1ihpexh7vv" path="res://Textures/grass.png" id="9_ct5i2"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="9_cj5nx"]
 [ext_resource type="PackedScene" uid="uid://bod2b5t285h1a" path="res://Scenes/Things/dysk.tscn" id="10_p2l55"]
+[ext_resource type="Texture2D" uid="uid://onyppw47aohd" path="res://addons/grass_01_1k/grass_01_color_1k.png" id="10_vut15"]
 [ext_resource type="PackedScene" uid="uid://bhtssm61hr1oa" path="res://Scenes/Things/Tree_patch.tscn" id="11_5yaip"]
+[ext_resource type="Texture2D" uid="uid://qdvsiqbn8t8j" path="res://addons/grass_01_1k/grass_01_height_1k.png" id="11_ri4wx"]
 [ext_resource type="PackedScene" uid="uid://b22h7bntvg4m" path="res://Scenes/Things/EndHole.tscn" id="11_xchqm"]
 [ext_resource type="PackedScene" uid="uid://bkwxxemjwp3j3" path="res://Scenes/Things/Tree_patch_small.tscn" id="12_pk2no"]
 [ext_resource type="Script" path="res://Scenes/level_timer.gd" id="15_ii32u"]
@@ -40,7 +42,9 @@ ambient_light_source = 3
 reflected_light_source = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gnhl"]
-albedo_texture = ExtResource("9_ct5i2")
+albedo_texture = ExtResource("10_vut15")
+heightmap_enabled = true
+heightmap_texture = ExtResource("11_ri4wx")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u064i"]
@@ -52,6 +56,9 @@ size = Vector2(20, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_df3di"]
 size = Vector3(100, 1, 100)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_o0v24"]
+size = Vector3(100, 50, 1)
+
 [node name="SceneBase" instance=ExtResource("1_p4omq")]
 script = ExtResource("2_nmgh6")
 
@@ -62,6 +69,7 @@ pose = &"default"
 
 [node name="FunctionTeleport" parent="XROrigin3D/LeftHand" index="1" instance=ExtResource("3_k8npn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.000692785)
+rotation_action = ""
 
 [node name="MovementTurn" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("4_y8n25")]
 
@@ -77,6 +85,9 @@ pose = &"default"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00246549, 2.38419e-07, -0.00147319)
 ranged_angle = 20.0
 impulse_factor = 4.0
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="2" instance=ExtResource("9_cj5nx")]
+laser_length = 1
 
 [node name="PlayerBody" parent="XROrigin3D" index="3" instance=ExtResource("7_ccdse")]
 
@@ -191,6 +202,27 @@ script = ExtResource("15_ii32u")
 [node name="EndLevelDisplay" parent="." index="8" instance=ExtResource("16_jjmje")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.4763, 1.30851, -0.503823)
 visible = false
+
+[node name="OutOfBoundsWalls" type="Node3D" parent="." index="9"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="OutOfBoundsWalls" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OutOfBoundsWalls/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+shape = SubResource("BoxShape3D_o0v24")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="OutOfBoundsWalls/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
+shape = SubResource("BoxShape3D_o0v24")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="OutOfBoundsWalls/StaticBody3D" index="2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 50, 0, 0)
+shape = SubResource("BoxShape3D_o0v24")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="OutOfBoundsWalls/StaticBody3D" index="3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 0, 0)
+shape = SubResource("BoxShape3D_o0v24")
 
 [connection signal="update_throws" from="." to="XROrigin3D/LeftHand/UiDisplay" method="_on_scene_base_update_throws"]
 [connection signal="update_timer" from="." to="XROrigin3D/LeftHand/UiDisplay" method="_on_scene_base_update_timer"]
